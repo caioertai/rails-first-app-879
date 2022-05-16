@@ -1,3 +1,13 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  # Here the routes will go
+  # User intentions can be defined and directed to the relevant controller action
+
+  # Hey, router, direct users from /about to the controller that will describe this
+  # Intention to the relevant controller action
+  #   path          "controller#action" (just convention)
+  # get "/", to: "pages#home"
+  root to: "pages#home"
+  get "/about", to: "pages#about" # PagesController
+  get "/contact", to: "pages#contact"
+  get "/members", to: "pages#members"
 end
